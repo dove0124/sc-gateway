@@ -1,0 +1,326 @@
+2020-05-11 09:19:43.447 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+				-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-11 09:19:43.679 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$9427e7fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:44.217 [restartedMain] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-r2dbc-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-11 09:19:44.220 [restartedMain] INFO  c.s.book.R2DBCServiceApplication
+				-No active profile set, falling back to default profiles: default
+2020-05-11 09:19:44.558 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2020-05-11 09:19:44.598 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 36ms. Found 1 R2DBC repository interfaces.
+2020-05-11 09:19:44.667 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:19:44.769 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:19:44.814 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:19:44.830 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:19:44.876 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=64e4ffa3-c39e-353e-bcdd-716735d6520f
+2020-05-11 09:19:44.948 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-05-11 09:19:44.951 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-05-11 09:19:44.954 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-05-11 09:19:44.972 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$9427e7fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:44.990 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.046 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.057 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.064 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.065 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.066 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:19:45.305 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+				-LiveReload server is running on port 35729
+2020-05-11 09:19:45.624 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-11 09:19:45.624 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 09:19:45.626 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-11 09:19:45.626 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 09:19:46.094 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-11 09:19:46.294 [restartedMain] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-05-11 09:19:46.312 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-05-11 09:19:47.015 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-11 09:19:47.025 [restartedMain] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-11 09:19:47.035 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-05-11 09:19:47.038 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-05-11 09:19:47.100 [restartedMain] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-r2dbc-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-05-11 09:19:47.132 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-05-11 09:19:47.132 [restartedMain] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-r2dbc-service-1.errorChannel' has 1 subscriber(s).
+2020-05-11 09:19:47.132 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-05-11 09:19:47.391 [restartedMain] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-r2dbc-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-11 09:19:47.421 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-05-11 09:19:47.421 [restartedMain] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-r2dbc-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-05-11 09:19:47.421 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-05-11 09:19:47.429 [restartedMain] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@190a7f48
+2020-05-11 09:19:47.690 [restartedMain] INFO  o.s.b.w.e.netty.NettyWebServer
+				-Netty started on port(s): 4000
+2020-05-11 09:19:47.703 [restartedMain] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-r2dbc-service-4000', name='sc-r2dbc-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=4000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:4000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-05-11 09:19:48.204 [restartedMain] INFO  c.s.book.R2DBCServiceApplication
+				-Started R2DBCServiceApplication in 5.43 seconds (JVM running for 6.276)
+2020-05-11 09:20:06.147 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 09:20:06.188 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.1
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:06.189 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.1
+				-request(unbounded)
+2020-05-11 09:20:06.205 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllById - $it
+2020-05-11 09:20:06.210 [reactor-http-nio-4] INFO  reactor.Flux.ConcatMap.2
+				-onSubscribe(FluxConcatMap.ConcatMapImmediate)
+2020-05-11 09:20:06.211 [reactor-http-nio-4] INFO  reactor.Flux.ConcatMap.2
+				-request(unbounded)
+2020-05-11 09:20:06.222 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllByName - $it
+2020-05-11 09:20:06.240 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.3
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:06.240 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.3
+				-request(unbounded)
+2020-05-11 09:20:06.241 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllByAge - $it
+2020-05-11 09:20:06.243 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.4
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:06.243 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.4
+				-request(unbounded)
+2020-05-11 09:20:06.319 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 09:20:06.320 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 09:20:06.327 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onComplete()
+2020-05-11 09:20:06.332 [reactor-tcp-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 09:20:06.332 [reactor-tcp-nio-4] INFO  reactor.Flux.OnErrorResume.4
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 09:20:06.332 [reactor-tcp-nio-2] INFO  reactor.Flux.ConcatMap.2
+				-onComplete()
+2020-05-11 09:20:06.333 [reactor-tcp-nio-4] INFO  reactor.Flux.OnErrorResume.4
+				-onComplete()
+2020-05-11 09:20:06.333 [reactor-tcp-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onComplete()
+2020-05-11 09:20:23.433 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 09:20:23.433 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.5
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:23.433 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.5
+				-request(unbounded)
+2020-05-11 09:20:23.433 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllById - $it
+2020-05-11 09:20:23.434 [reactor-http-nio-4] INFO  reactor.Flux.ConcatMap.6
+				-onSubscribe(FluxConcatMap.ConcatMapImmediate)
+2020-05-11 09:20:23.434 [reactor-http-nio-4] INFO  reactor.Flux.ConcatMap.6
+				-request(unbounded)
+2020-05-11 09:20:23.435 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllByName - $it
+2020-05-11 09:20:23.436 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.7
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:23.436 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.7
+				-request(unbounded)
+2020-05-11 09:20:23.436 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAllByAge - $it
+2020-05-11 09:20:23.438 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.8
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:20:23.438 [reactor-http-nio-4] INFO  reactor.Flux.OnErrorResume.8
+				-request(unbounded)
+2020-05-11 09:20:23.503 [reactor-tcp-nio-5] INFO  reactor.Flux.OnErrorResume.5
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 09:20:23.504 [reactor-tcp-nio-7] INFO  reactor.Flux.OnErrorResume.7
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 09:20:23.504 [reactor-tcp-nio-5] INFO  reactor.Flux.OnErrorResume.5
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 09:20:23.504 [reactor-tcp-nio-7] INFO  reactor.Flux.OnErrorResume.7
+				-onComplete()
+2020-05-11 09:20:23.504 [reactor-tcp-nio-5] INFO  reactor.Flux.OnErrorResume.5
+				-onComplete()
+2020-05-11 09:20:23.509 [reactor-tcp-nio-8] INFO  reactor.Flux.OnErrorResume.8
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 09:20:23.510 [reactor-tcp-nio-6] INFO  reactor.Flux.ConcatMap.6
+				-onComplete()
+2020-05-11 09:20:23.510 [reactor-tcp-nio-8] INFO  reactor.Flux.OnErrorResume.8
+				-onComplete()
+2020-05-11 09:27:30.306 [reactor-http-nio-4] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 09:28:07.400 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+				-Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-11 09:28:07.627 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$1d6db6de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.170 [restartedMain] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-r2dbc-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-11 09:28:08.173 [restartedMain] INFO  c.s.book.R2DBCServiceApplication
+				-No active profile set, falling back to default profiles: default
+2020-05-11 09:28:08.478 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2020-05-11 09:28:08.511 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 30ms. Found 1 R2DBC repository interfaces.
+2020-05-11 09:28:08.576 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:28:08.679 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:28:08.725 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:28:08.741 [restartedMain] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-05-11 09:28:08.787 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=64e4ffa3-c39e-353e-bcdd-716735d6520f
+2020-05-11 09:28:08.860 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-05-11 09:28:08.863 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-05-11 09:28:08.866 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-05-11 09:28:08.882 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$1d6db6de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.898 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.953 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.964 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.970 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.972 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:08.973 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-11 09:28:09.195 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+				-LiveReload server is running on port 35729
+2020-05-11 09:28:09.516 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-11 09:28:09.517 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 09:28:09.519 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-11 09:28:09.519 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 09:28:09.989 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-11 09:28:10.200 [restartedMain] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-05-11 09:28:10.217 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-05-11 09:28:10.938 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-11 09:28:10.947 [restartedMain] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-11 09:28:10.958 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-05-11 09:28:10.961 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-05-11 09:28:11.019 [restartedMain] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-r2dbc-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-05-11 09:28:11.049 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-05-11 09:28:11.049 [restartedMain] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-r2dbc-service-1.errorChannel' has 1 subscriber(s).
+2020-05-11 09:28:11.049 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-05-11 09:28:11.315 [restartedMain] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-r2dbc-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-11 09:28:11.346 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-05-11 09:28:11.346 [restartedMain] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-r2dbc-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-05-11 09:28:11.346 [restartedMain] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-05-11 09:28:11.353 [restartedMain] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@113aeaf1
+2020-05-11 09:28:11.619 [restartedMain] INFO  o.s.b.w.e.netty.NettyWebServer
+				-Netty started on port(s): 4000
+2020-05-11 09:28:11.632 [restartedMain] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-r2dbc-service-4000', name='sc-r2dbc-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=4000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:4000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-05-11 09:28:12.124 [restartedMain] INFO  c.s.book.R2DBCServiceApplication
+				-Started R2DBCServiceApplication in 5.343 seconds (JVM running for 6.168)
+2020-05-11 09:28:16.431 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 09:28:16.488 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.1
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 09:28:16.489 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.1
+				-request(unbounded)
+2020-05-11 09:28:16.607 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 09:28:16.609 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 09:28:16.616 [reactor-tcp-nio-1] INFO  reactor.Flux.OnErrorResume.1
+				-onComplete()
+2020-05-11 10:37:18.933 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 10:37:18.935 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.2
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 10:37:18.936 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.2
+				-request(unbounded)
+2020-05-11 10:37:19.089 [reactor-tcp-nio-2] INFO  reactor.Flux.OnErrorResume.2
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 10:37:19.089 [reactor-tcp-nio-2] INFO  reactor.Flux.OnErrorResume.2
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 10:37:19.090 [reactor-tcp-nio-2] INFO  reactor.Flux.OnErrorResume.2
+				-onComplete()
+2020-05-11 10:38:22.845 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAll - $it
+2020-05-11 10:38:22.847 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 10:38:22.847 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-request(unbounded)
+2020-05-11 10:38:22.848 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAllById - $it
+2020-05-11 10:38:22.858 [reactor-http-nio-3] INFO  reactor.Flux.ConcatMap.4
+				-onSubscribe(FluxConcatMap.ConcatMapImmediate)
+2020-05-11 10:38:22.858 [reactor-http-nio-3] INFO  reactor.Flux.ConcatMap.4
+				-request(unbounded)
+2020-05-11 10:38:22.871 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAllByName - $it
+2020-05-11 10:38:22.887 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.5
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 10:38:22.888 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.5
+				-request(unbounded)
+2020-05-11 10:38:22.888 [reactor-http-nio-3] INFO  c.s.book.controller.PersonController
+				-findAllByAge - $it
+2020-05-11 10:38:22.890 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.6
+				-onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2020-05-11 10:38:22.890 [reactor-http-nio-3] INFO  reactor.Flux.OnErrorResume.6
+				-request(unbounded)
+2020-05-11 10:38:22.901 [reactor-tcp-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 10:38:22.901 [reactor-tcp-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 10:38:22.901 [reactor-tcp-nio-3] INFO  reactor.Flux.OnErrorResume.3
+				-onComplete()
+2020-05-11 10:38:22.938 [reactor-tcp-nio-4] INFO  reactor.Flux.ConcatMap.4
+				-onComplete()
+2020-05-11 10:38:22.947 [reactor-tcp-nio-5] INFO  reactor.Flux.OnErrorResume.5
+				-onNext(Person{id=3, name='Laura So', age=23})
+2020-05-11 10:38:22.947 [reactor-tcp-nio-6] INFO  reactor.Flux.OnErrorResume.6
+				-onNext(Person{id=2, name='Dan Newton', age=25})
+2020-05-11 10:38:22.948 [reactor-tcp-nio-6] INFO  reactor.Flux.OnErrorResume.6
+				-onComplete()
+2020-05-11 10:38:22.948 [reactor-tcp-nio-5] INFO  reactor.Flux.OnErrorResume.5
+				-onComplete()

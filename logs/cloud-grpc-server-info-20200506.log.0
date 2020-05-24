@@ -1,0 +1,143 @@
+2020-05-06 09:50:36.145 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$46d4e6ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 09:50:37.984 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/cloud-grpc-server:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/cloud-grpc-server/'}, BootstrapPropertySource {name='bootstrapProperties-config/application:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-06 09:50:38.059 [main] INFO  c.s.c.CloudGrpcServerApplication
+				-The following profiles are active: dev
+2020-05-06 09:50:39.579 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-05-06 09:50:39.921 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-05-06 09:50:40.014 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-06 09:50:40.475 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=e92a91e9-149e-30a0-8e9d-1fe36e77747b
+2020-05-06 09:50:40.722 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-05-06 09:50:40.736 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-05-06 09:50:40.742 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-05-06 09:50:40.813 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$46d4e6ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 09:50:41.103 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 09:50:41.111 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 09:50:41.168 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 09:50:41.892 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 8081 (http)
+2020-05-06 09:50:41.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-06 09:50:41.910 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-05-06 09:50:41.910 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-06 09:50:42.215 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				-Initializing Spring embedded WebApplicationContext
+2020-05-06 09:50:42.216 [main] INFO  o.s.web.context.ContextLoader
+				-Root WebApplicationContext: initialization completed in 4134 ms
+2020-05-06 09:50:42.483 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-06 09:50:42.483 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-06 09:50:42.501 [main] INFO  c.n.config.DynamicPropertyFactory
+				-DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@60bf494c
+2020-05-06 09:50:44.298 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-05-06 09:50:45.560 [main] WARN  o.s.c.s.z.ZipkinAutoConfiguration
+				-Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@30517a57}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2020-05-06 09:50:46.272 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-05-06 09:50:46.272 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-06 09:50:46.574 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor
+				-Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 09:50:48.227 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-05-06 09:50:49.254 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-06 09:50:49.446 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-05-06 09:50:49.471 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-05-06 09:50:49.705 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 23 endpoint(s) beneath base path '/actuator'
+2020-05-06 09:50:49.971 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'cloud-grpc-server-1.springCloudBusInput' has 1 subscriber(s).
+2020-05-06 09:50:50.075 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-05-06 09:50:50.076 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'cloud-grpc-server-1.errorChannel' has 1 subscriber(s).
+2020-05-06 09:50:50.076 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-05-06 09:50:50.802 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/cloud-grpc-server:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/cloud-grpc-server/'}, BootstrapPropertySource {name='bootstrapProperties-config/application:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-05-06 09:50:50.913 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-05-06 09:50:50.914 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'cloud-grpc-server-1.springCloudBusOutput' has 1 subscriber(s).
+2020-05-06 09:50:50.914 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-05-06 09:50:50.954 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@515940af
+2020-05-06 09:50:51.110 [main] INFO  n.d.b.g.s.s.AbstractGrpcServerFactory
+				-Registered gRPC service: Simple, bean: grpcServerService, class: cn.springcloud.cloudgrpcserver.GrpcServerService
+2020-05-06 09:50:52.325 [main] INFO  n.d.b.g.s.s.GrpcServerLifecycle
+				-gRPC Server started, listening on address: *, port: 49488
+2020-05-06 09:50:52.423 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-8081"]
+2020-05-06 09:50:52.487 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-06 09:50:52.520 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='cloud-grpc-server-8081', name='cloud-grpc-server', tags=[secure=false, gRPC.port=49488], address='SHINETECH-ANDY.lan', meta=null, port=8081, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY.lan:8081/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-05-06 09:50:52.926 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 09:50:52.928 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+				-Initializing Servlet 'dispatcherServlet'
+2020-05-06 09:50:52.954 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+				-Completed initialization in 26 ms
+2020-05-06 09:50:53.382 [main] INFO  c.s.c.CloudGrpcServerApplication
+				-Started CloudGrpcServerApplication in 19.853 seconds (JVM running for 22.362)
+2020-05-06 09:50:53.551 [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@30517a57}] WARN  z.r.AsyncReporter$BoundedAsyncReporter
+				-Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-05-06 09:50:53.556 [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@30517a57}] WARN  z.r.AsyncReporter$BoundedAsyncReporter
+				-Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739)
+	... 9 common frames omitted
+2020-05-06 09:54:40.208 [grpc-default-executor-0] INFO  c.s.c.LogGrpcInterceptor
+				-Simple/SayHello

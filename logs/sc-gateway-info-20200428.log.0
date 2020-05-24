@@ -1,0 +1,838 @@
+2020-04-28 11:17:53.935 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$672fdfb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:54.585 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-gateway:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/sc-gateway/'}, BootstrapPropertySource {name='bootstrapProperties-config/application:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-28 11:17:54.616 [main] INFO  c.s.book.GatewayServerApplication
+				-The following profiles are active: dev
+2020-04-28 11:17:55.125 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-28 11:17:55.255 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-28 11:17:55.291 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-28 11:17:55.345 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-28 11:17:55.464 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=b079eae0-cae8-328e-a2cc-61dd634d6afd
+2020-04-28 11:17:55.513 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-28 11:17:55.519 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-28 11:17:55.522 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-28 11:17:55.551 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$672fdfb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.675 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.677 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.693 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.700 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.702 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.704 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 11:17:55.890 [main] DEBUG o.s.c.g.config.GatewayProperties
+				-Routes supplied from Gateway Properties: [RouteDefinition{id='cloud-grpc-client', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/cloud-grpc-client/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/cloud-grpc-client/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://cloud-grpc-client, order=0, metadata={}}, RouteDefinition{id='sc-webflux-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/sc-webflux-service/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/sc-webflux-service/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://sc-webflux-service, order=0, metadata={}}, RouteDefinition{id='sc-user-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/sc-user-service/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/sc-user-service/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://sc-user-service, order=0, metadata={}}, RouteDefinition{id='sc-rx-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/sc-rx-service/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/sc-rx-service/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://sc-rx-service, order=0, metadata={}}, RouteDefinition{id='sc-r2dbc-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/sc-r2dbc-service/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/sc-r2dbc-service/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://sc-r2dbc-service, order=0, metadata={}}, RouteDefinition{id='cardservice', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/card/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/card/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://cardservice, order=0, metadata={}}, RouteDefinition{id='medicineservice', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/medicine/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/medicine/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://medicineservice, order=0, metadata={}}, RouteDefinition{id='prescriptionservice', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/prescription/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/prescription/(?<path>.*), _genkey_1=/$\{path}}}], uri=lb://prescriptionservice, order=0, metadata={}}]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [After]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Before]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Between]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Cookie]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Header]
+2020-04-28 11:17:56.595 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Host]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Method]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Path]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Query]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [RemoteAddr]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [Weight]
+2020-04-28 11:17:56.596 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator
+				-Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2020-04-28 11:17:56.638 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-28 11:17:56.638 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-28 11:17:56.641 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-28 11:17:56.641 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-28 11:17:57.548 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-28 11:17:57.638 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 25 endpoint(s) beneath base path '/actuator'
+2020-04-28 11:17:57.781 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-28 11:17:58.063 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-28 11:17:58.078 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-28 11:17:58.896 [main] WARN  o.s.c.s.z.ZipkinAutoConfiguration
+				-Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@3c07e830}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2020-04-28 11:17:59.117 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-28 11:17:59.121 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-28 11:17:59.223 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-gateway-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-28 11:17:59.250 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-28 11:17:59.250 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-gateway-1.errorChannel' has 1 subscriber(s).
+2020-04-28 11:17:59.251 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-28 11:17:59.525 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-gateway:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/sc-gateway/'}, BootstrapPropertySource {name='bootstrapProperties-config/application:dev/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-28 11:17:59.593 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying {_genkey_0=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.623 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying filter {_genkey_0=/cloud-grpc-client/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.629 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cloud-grpc-client
+2020-04-28 11:17:59.629 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying {_genkey_0=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.630 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying filter {_genkey_0=/sc-webflux-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.630 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-webflux-service
+2020-04-28 11:17:59.630 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying {_genkey_0=/sc-user-service/**} to Path
+2020-04-28 11:17:59.631 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying filter {_genkey_0=/sc-user-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.631 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-user-service
+2020-04-28 11:17:59.631 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying {_genkey_0=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.631 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying filter {_genkey_0=/sc-rx-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.632 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-rx-service
+2020-04-28 11:17:59.632 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying {_genkey_0=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.632 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying filter {_genkey_0=/sc-r2dbc-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.633 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-r2dbc-service
+2020-04-28 11:17:59.633 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying {_genkey_0=/card/**} to Path
+2020-04-28 11:17:59.633 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying filter {_genkey_0=/card/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.634 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cardservice
+2020-04-28 11:17:59.634 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying {_genkey_0=/medicine/**} to Path
+2020-04-28 11:17:59.634 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying filter {_genkey_0=/medicine/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.634 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: medicineservice
+2020-04-28 11:17:59.634 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying {_genkey_0=/prescription/**} to Path
+2020-04-28 11:17:59.635 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying filter {_genkey_0=/prescription/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.635 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: prescriptionservice
+2020-04-28 11:17:59.635 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying {pattern=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.636 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying filter {regexp=/cloud-grpc-client/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.636 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-client
+2020-04-28 11:17:59.636 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying {pattern=/cloud-grpc-server/**} to Path
+2020-04-28 11:17:59.636 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying filter {regexp=/cloud-grpc-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.637 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-server
+2020-04-28 11:17:59.637 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying {pattern=/consul/**} to Path
+2020-04-28 11:17:59.637 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying filter {regexp=/consul/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.638 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_consul
+2020-04-28 11:17:59.638 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying {pattern=/medicineservice/**} to Path
+2020-04-28 11:17:59.638 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying filter {regexp=/medicineservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.638 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_medicineservice
+2020-04-28 11:17:59.638 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying {pattern=/prescriptionservice/**} to Path
+2020-04-28 11:17:59.639 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying filter {regexp=/prescriptionservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.639 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_prescriptionservice
+2020-04-28 11:17:59.639 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying {pattern=/sc-admin-server/**} to Path
+2020-04-28 11:17:59.640 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying filter {regexp=/sc-admin-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.640 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-admin-server
+2020-04-28 11:17:59.640 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying {pattern=/sc-consul-server/**} to Path
+2020-04-28 11:17:59.640 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying filter {regexp=/sc-consul-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.641 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-consul-server
+2020-04-28 11:17:59.641 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying {pattern=/sc-data-service/**} to Path
+2020-04-28 11:17:59.642 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying filter {regexp=/sc-data-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.642 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-data-service
+2020-04-28 11:17:59.642 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying {pattern=/sc-gateway/**} to Path
+2020-04-28 11:17:59.643 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying filter {regexp=/sc-gateway/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.643 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-gateway
+2020-04-28 11:17:59.643 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying {pattern=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.644 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying filter {regexp=/sc-r2dbc-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.644 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-r2dbc-service
+2020-04-28 11:17:59.644 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying {pattern=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.644 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying filter {regexp=/sc-rx-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.645 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-rx-service
+2020-04-28 11:17:59.645 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying {pattern=/sc-user-service/**} to Path
+2020-04-28 11:17:59.645 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying filter {regexp=/sc-user-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.645 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-user-service
+2020-04-28 11:17:59.645 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying {pattern=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.646 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying filter {regexp=/sc-webflux-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.646 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-webflux-service
+2020-04-28 11:17:59.646 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying {pattern=/cardservice/**} to Path
+2020-04-28 11:17:59.647 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying filter {regexp=/cardservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.647 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cardservice
+2020-04-28 11:17:59.656 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-28 11:17:59.656 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-gateway-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-28 11:17:59.656 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-28 11:17:59.666 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@55b62db8
+2020-04-28 11:17:59.671 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying {_genkey_0=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.672 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying filter {_genkey_0=/cloud-grpc-client/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.673 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cloud-grpc-client
+2020-04-28 11:17:59.673 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying {_genkey_0=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.678 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying filter {_genkey_0=/sc-webflux-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.678 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-webflux-service
+2020-04-28 11:17:59.678 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying {pattern=/cardservice/**} to Path
+2020-04-28 11:17:59.679 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying filter {regexp=/cardservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.679 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cardservice
+2020-04-28 11:17:59.679 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying {pattern=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.680 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying filter {regexp=/cloud-grpc-client/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.680 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-client
+2020-04-28 11:17:59.680 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying {pattern=/consul/**} to Path
+2020-04-28 11:17:59.680 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying filter {regexp=/consul/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.681 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_consul
+2020-04-28 11:17:59.681 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying {pattern=/medicineservice/**} to Path
+2020-04-28 11:17:59.681 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying filter {regexp=/medicineservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.681 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_medicineservice
+2020-04-28 11:17:59.681 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying {pattern=/prescriptionservice/**} to Path
+2020-04-28 11:17:59.682 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying filter {regexp=/prescriptionservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.682 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_prescriptionservice
+2020-04-28 11:17:59.682 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying {pattern=/sc-admin-server/**} to Path
+2020-04-28 11:17:59.682 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying filter {regexp=/sc-admin-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.683 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-admin-server
+2020-04-28 11:17:59.683 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying {pattern=/sc-consul-server/**} to Path
+2020-04-28 11:17:59.683 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying filter {regexp=/sc-consul-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.683 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-consul-server
+2020-04-28 11:17:59.684 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying {pattern=/sc-data-service/**} to Path
+2020-04-28 11:17:59.684 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying filter {regexp=/sc-data-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.684 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-data-service
+2020-04-28 11:17:59.684 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying {pattern=/sc-gateway/**} to Path
+2020-04-28 11:17:59.685 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying filter {regexp=/sc-gateway/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.685 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-gateway
+2020-04-28 11:17:59.685 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying {pattern=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.685 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying filter {regexp=/sc-r2dbc-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.686 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-r2dbc-service
+2020-04-28 11:17:59.686 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying {pattern=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.686 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying filter {regexp=/sc-rx-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.686 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying {_genkey_0=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.686 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-rx-service
+2020-04-28 11:17:59.686 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying {pattern=/sc-user-service/**} to Path
+2020-04-28 11:17:59.687 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying filter {_genkey_0=/cloud-grpc-client/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.687 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying filter {regexp=/sc-user-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.687 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cloud-grpc-client
+2020-04-28 11:17:59.687 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-user-service
+2020-04-28 11:17:59.687 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying {_genkey_0=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.687 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying {pattern=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.687 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying filter {regexp=/sc-webflux-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.687 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying filter {_genkey_0=/sc-webflux-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.688 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-webflux-service
+2020-04-28 11:17:59.689 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying {pattern=/cloud-grpc-server/**} to Path
+2020-04-28 11:17:59.689 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-webflux-service
+2020-04-28 11:17:59.689 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying {_genkey_0=/sc-user-service/**} to Path
+2020-04-28 11:17:59.691 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying filter {_genkey_0=/sc-user-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.691 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying filter {regexp=/cloud-grpc-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.692 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-server
+2020-04-28 11:17:59.692 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-user-service
+2020-04-28 11:17:59.693 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying {_genkey_0=/sc-user-service/**} to Path
+2020-04-28 11:17:59.693 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying {_genkey_0=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.693 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying filter {_genkey_0=/sc-user-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.693 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying filter {_genkey_0=/sc-rx-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.693 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-user-service
+2020-04-28 11:17:59.693 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-rx-service
+2020-04-28 11:17:59.693 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying {_genkey_0=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.693 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying {_genkey_0=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.694 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying filter {_genkey_0=/sc-rx-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.694 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying filter {_genkey_0=/sc-r2dbc-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.694 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-rx-service
+2020-04-28 11:17:59.694 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-r2dbc-service
+2020-04-28 11:17:59.694 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying {_genkey_0=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.694 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying {_genkey_0=/card/**} to Path
+2020-04-28 11:17:59.695 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying filter {_genkey_0=/sc-r2dbc-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.695 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying filter {_genkey_0=/card/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.695 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-r2dbc-service
+2020-04-28 11:17:59.695 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cardservice
+2020-04-28 11:17:59.695 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying {_genkey_0=/card/**} to Path
+2020-04-28 11:17:59.695 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying {_genkey_0=/medicine/**} to Path
+2020-04-28 11:17:59.695 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying filter {_genkey_0=/card/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.695 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying filter {_genkey_0=/medicine/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.696 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cardservice
+2020-04-28 11:17:59.696 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: medicineservice
+2020-04-28 11:17:59.696 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying {_genkey_0=/medicine/**} to Path
+2020-04-28 11:17:59.696 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying {_genkey_0=/prescription/**} to Path
+2020-04-28 11:17:59.696 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying filter {_genkey_0=/prescription/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.696 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying filter {_genkey_0=/medicine/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.696 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: prescriptionservice
+2020-04-28 11:17:59.696 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: medicineservice
+2020-04-28 11:17:59.696 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying {pattern=/consul/**} to Path
+2020-04-28 11:17:59.696 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying {_genkey_0=/prescription/**} to Path
+2020-04-28 11:17:59.697 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying filter {_genkey_0=/prescription/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:17:59.697 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying filter {regexp=/consul/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.697 [catalogWatchTaskScheduler-1] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: prescriptionservice
+2020-04-28 11:17:59.697 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_consul
+2020-04-28 11:17:59.697 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying {pattern=/medicineservice/**} to Path
+2020-04-28 11:17:59.698 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying filter {regexp=/medicineservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.698 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_medicineservice
+2020-04-28 11:17:59.698 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying {pattern=/prescriptionservice/**} to Path
+2020-04-28 11:17:59.699 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying filter {regexp=/prescriptionservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.699 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_prescriptionservice
+2020-04-28 11:17:59.699 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying {pattern=/sc-admin-server/**} to Path
+2020-04-28 11:17:59.699 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying filter {regexp=/sc-admin-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.700 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-admin-server
+2020-04-28 11:17:59.700 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying {pattern=/sc-consul-server/**} to Path
+2020-04-28 11:17:59.700 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying filter {regexp=/sc-consul-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.700 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-consul-server
+2020-04-28 11:17:59.701 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying {pattern=/sc-data-service/**} to Path
+2020-04-28 11:17:59.701 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying filter {regexp=/sc-data-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.701 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-data-service
+2020-04-28 11:17:59.701 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying {pattern=/sc-gateway/**} to Path
+2020-04-28 11:17:59.702 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying filter {regexp=/sc-gateway/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.702 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-gateway
+2020-04-28 11:17:59.702 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying {pattern=/sc-r2dbc-service/**} to Path
+2020-04-28 11:17:59.702 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying filter {regexp=/sc-r2dbc-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.703 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-r2dbc-service
+2020-04-28 11:17:59.703 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying {pattern=/sc-rx-service/**} to Path
+2020-04-28 11:17:59.703 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying filter {regexp=/sc-rx-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.703 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-rx-service
+2020-04-28 11:17:59.703 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying {pattern=/sc-user-service/**} to Path
+2020-04-28 11:17:59.704 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying filter {regexp=/sc-user-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.704 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-user-service
+2020-04-28 11:17:59.704 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying {pattern=/sc-webflux-service/**} to Path
+2020-04-28 11:17:59.705 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying filter {regexp=/sc-webflux-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.705 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-webflux-service
+2020-04-28 11:17:59.705 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying {pattern=/cardservice/**} to Path
+2020-04-28 11:17:59.705 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying filter {regexp=/cardservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.706 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cardservice
+2020-04-28 11:17:59.706 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying {pattern=/cloud-grpc-client/**} to Path
+2020-04-28 11:17:59.706 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying filter {regexp=/cloud-grpc-client/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.706 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-client
+2020-04-28 11:17:59.707 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying {pattern=/cloud-grpc-server/**} to Path
+2020-04-28 11:17:59.707 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying filter {regexp=/cloud-grpc-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:17:59.707 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-server
+2020-04-28 11:17:59.973 [main] INFO  o.s.b.w.e.netty.NettyWebServer
+				-Netty started on port(s): 6666
+2020-04-28 11:17:59.983 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-gateway-6666', name='sc-gateway', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=6666, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:6666/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-28 11:18:00.004 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying {_genkey_0=/cloud-grpc-client/**} to Path
+2020-04-28 11:18:00.005 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cloud-grpc-client applying filter {_genkey_0=/cloud-grpc-client/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.006 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cloud-grpc-client
+2020-04-28 11:18:00.006 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying {_genkey_0=/sc-webflux-service/**} to Path
+2020-04-28 11:18:00.010 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-webflux-service applying filter {_genkey_0=/sc-webflux-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.011 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-webflux-service
+2020-04-28 11:18:00.011 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying {_genkey_0=/sc-user-service/**} to Path
+2020-04-28 11:18:00.011 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-user-service applying filter {_genkey_0=/sc-user-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.012 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-user-service
+2020-04-28 11:18:00.012 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying {_genkey_0=/sc-rx-service/**} to Path
+2020-04-28 11:18:00.012 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-rx-service applying filter {_genkey_0=/sc-rx-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.012 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-rx-service
+2020-04-28 11:18:00.012 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying {_genkey_0=/sc-r2dbc-service/**} to Path
+2020-04-28 11:18:00.013 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition sc-r2dbc-service applying filter {_genkey_0=/sc-r2dbc-service/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.013 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: sc-r2dbc-service
+2020-04-28 11:18:00.013 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying {_genkey_0=/card/**} to Path
+2020-04-28 11:18:00.014 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition cardservice applying filter {_genkey_0=/card/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.014 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: cardservice
+2020-04-28 11:18:00.014 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying {_genkey_0=/medicine/**} to Path
+2020-04-28 11:18:00.014 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition medicineservice applying filter {_genkey_0=/medicine/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.015 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: medicineservice
+2020-04-28 11:18:00.015 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying {_genkey_0=/prescription/**} to Path
+2020-04-28 11:18:00.015 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition prescriptionservice applying filter {_genkey_0=/prescription/(?<path>.*), _genkey_1=/$\{path}} to RewritePath
+2020-04-28 11:18:00.015 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: prescriptionservice
+2020-04-28 11:18:00.015 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying {pattern=/consul/**} to Path
+2020-04-28 11:18:00.016 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_consul applying filter {regexp=/consul/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.016 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_consul
+2020-04-28 11:18:00.016 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying {pattern=/medicineservice/**} to Path
+2020-04-28 11:18:00.016 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_medicineservice applying filter {regexp=/medicineservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.017 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_medicineservice
+2020-04-28 11:18:00.017 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying {pattern=/prescriptionservice/**} to Path
+2020-04-28 11:18:00.017 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_prescriptionservice applying filter {regexp=/prescriptionservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.017 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_prescriptionservice
+2020-04-28 11:18:00.017 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying {pattern=/sc-admin-server/**} to Path
+2020-04-28 11:18:00.018 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-admin-server applying filter {regexp=/sc-admin-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.018 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-admin-server
+2020-04-28 11:18:00.018 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying {pattern=/sc-consul-server/**} to Path
+2020-04-28 11:18:00.018 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-consul-server applying filter {regexp=/sc-consul-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.019 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-consul-server
+2020-04-28 11:18:00.019 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying {pattern=/sc-data-service/**} to Path
+2020-04-28 11:18:00.019 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-data-service applying filter {regexp=/sc-data-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.019 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-data-service
+2020-04-28 11:18:00.020 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying {pattern=/sc-gateway/**} to Path
+2020-04-28 11:18:00.020 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-gateway applying filter {regexp=/sc-gateway/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.020 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-gateway
+2020-04-28 11:18:00.020 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying {pattern=/sc-r2dbc-service/**} to Path
+2020-04-28 11:18:00.021 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-r2dbc-service applying filter {regexp=/sc-r2dbc-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.021 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-r2dbc-service
+2020-04-28 11:18:00.021 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying {pattern=/sc-rx-service/**} to Path
+2020-04-28 11:18:00.022 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-rx-service applying filter {regexp=/sc-rx-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.022 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-rx-service
+2020-04-28 11:18:00.022 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying {pattern=/sc-user-service/**} to Path
+2020-04-28 11:18:00.023 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-user-service applying filter {regexp=/sc-user-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.023 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-user-service
+2020-04-28 11:18:00.023 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying {pattern=/sc-webflux-service/**} to Path
+2020-04-28 11:18:00.024 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_sc-webflux-service applying filter {regexp=/sc-webflux-service/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.024 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_sc-webflux-service
+2020-04-28 11:18:00.024 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying {pattern=/cardservice/**} to Path
+2020-04-28 11:18:00.024 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cardservice applying filter {regexp=/cardservice/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.025 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cardservice
+2020-04-28 11:18:00.025 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying {pattern=/cloud-grpc-client/**} to Path
+2020-04-28 11:18:00.025 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-client applying filter {regexp=/cloud-grpc-client/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.025 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-client
+2020-04-28 11:18:00.025 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying {pattern=/cloud-grpc-server/**} to Path
+2020-04-28 11:18:00.026 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition ReactiveCompositeDiscoveryClient_cloud-grpc-server applying filter {regexp=/cloud-grpc-server/(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2020-04-28 11:18:00.026 [main] DEBUG o.s.c.g.r.RouteDefinitionRouteLocator
+				-RouteDefinition matched: ReactiveCompositeDiscoveryClient_cloud-grpc-server
+2020-04-28 11:18:00.469 [main] INFO  c.s.book.GatewayServerApplication
+				-Started GatewayServerApplication in 7.546 seconds (JVM running for 8.406)
+2020-04-28 11:18:00.888 [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@3c07e830}] WARN  z.r.AsyncReporter$BoundedAsyncReporter
+				-Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-04-28 11:18:00.890 [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@3c07e830}] WARN  z.r.AsyncReporter$BoundedAsyncReporter
+				-Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739)
+	... 9 common frames omitted
+2020-04-28 11:36:38.995 [catalogWatchTaskScheduler-1] INFO  o.a.http.impl.execchain.RetryExec
+				-I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8500: Software caused connection abort: recv failed
+2020-04-28 11:36:38.995 [catalogWatchTaskScheduler-1] INFO  o.a.http.impl.execchain.RetryExec
+				-Retrying request to {}->http://127.0.0.1:8500
+2020-04-28 11:36:39.409 [pool-7-thread-1] INFO  o.a.http.impl.execchain.RetryExec
+				-I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8500: Connection reset
+2020-04-28 11:36:39.409 [configWatchTaskScheduler-1] INFO  o.a.http.impl.execchain.RetryExec
+				-I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8500: Connection reset
+2020-04-28 11:36:39.410 [pool-7-thread-1] INFO  o.a.http.impl.execchain.RetryExec
+				-Retrying request to {}->http://127.0.0.1:8500
+2020-04-28 11:36:39.410 [configWatchTaskScheduler-1] INFO  o.a.http.impl.execchain.RetryExec
+				-Retrying request to {}->http://127.0.0.1:8500
+2020-04-28 11:36:40.010 [catalogWatchTaskScheduler-1] ERROR o.s.c.c.d.ConsulDiscoveryClient
+				-Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:77)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:34)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:128)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:120)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:372)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:129)
+	at org.springframework.cloud.sleuth.instrument.async.TraceRunnable.run(TraceRunnable.java:67)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:61)
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 26 common frames omitted
+2020-04-28 11:36:40.423 [configWatchTaskScheduler-1] WARN  o.s.cloud.consul.config.ConfigWatch
+				-Error querying consul Key/Values for context 'config/application/'. Message: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:40.423 [pool-7-thread-1] ERROR o.s.c.c.b.ConsulInboundMessageProducer
+				-Error getting consul events: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:41.928 [pool-7-thread-1] ERROR o.s.c.c.b.ConsulInboundMessageProducer
+				-Error getting consul events: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:42.015 [catalogWatchTaskScheduler-1] ERROR o.s.c.c.d.ConsulDiscoveryClient
+				-Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:77)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:34)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:128)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:120)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:372)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:129)
+	at org.springframework.cloud.sleuth.instrument.async.TraceRunnable.run(TraceRunnable.java:67)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:61)
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 26 common frames omitted
+2020-04-28 11:36:42.438 [configWatchTaskScheduler-1] WARN  o.s.cloud.consul.config.ConfigWatch
+				-Error querying consul Key/Values for context 'config/sc-gateway:dev/'. Message: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:43.429 [pool-7-thread-1] ERROR o.s.c.c.b.ConsulInboundMessageProducer
+				-Error getting consul events: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:43.441 [configWatchTaskScheduler-1] WARN  o.s.cloud.consul.config.ConfigWatch
+				-Error querying consul Key/Values for context 'config/sc-gateway/'. Message: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+2020-04-28 11:36:44.029 [catalogWatchTaskScheduler-1] ERROR o.s.c.c.d.ConsulDiscoveryClient
+				-Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:77)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:34)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:128)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:120)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:372)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:129)
+	at org.springframework.cloud.sleuth.instrument.async.TraceRunnable.run(TraceRunnable.java:67)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8500 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:61)
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 26 common frames omitted

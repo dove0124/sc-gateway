@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: sc-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+      routes:
+        - id: cloud-grpc-client
+          uri: lb://cloud-grpc-client
+          predicates:
+            - Path=/cloud-grpc-client/**
+          filters:
+            - RewritePath=/cloud-grpc-client/(?<path>.*), /$\{path}
+        - id: sc-webflux-service
+          uri: lb://sc-webflux-service
+          predicates:
+            - Path=/sc-webflux-service/**
+          filters:
+            - RewritePath=/sc-webflux-service/(?<path>.*), /$\{path}
+        - id: sc-user-service
+          uri: lb://sc-user-service
+          predicates:
+            - Path=/sc-user-service/**
+          filters:
+            - RewritePath=/sc-user-service/(?<path>.*), /$\{path}
+#            - GwSwaggerHeaderFilter
+#            - StripPrefix=1
+        - id: sc-rx-service
+          uri: lb://sc-rx-service
+          predicates:
+            - Path=/sc-rx-service/**
+          filters:
+            - RewritePath=/sc-rx-service/(?<path>.*), /$\{path}
+        - id: sc-r2dbc-service
+          uri: lb://sc-r2dbc-service
+          predicates:
+            - Path=/sc-r2dbc-service/**
+          filters:
+            - RewritePath=/sc-r2dbc-service/(?<path>.*), /$\{path}
+        - id: cardservice
+          uri: lb://cardservice
+          predicates:
+            - Path=/card/**
+          filters:
+            - RewritePath=/card/(?<path>.*), /$\{path}
+        - id: medicineservice
+          uri: lb://medicineservice
+          predicates:
+            - Path=/medicine/**
+          filters:
+            - RewritePath=/medicine/(?<path>.*), /$\{path}
+        - id: prescriptionservice
+          uri: lb://prescriptionservice
+          predicates:
+            - Path=/prescription/**
+          filters:
+            - RewritePath=/prescription/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    service-url: #指定注册中心的地址，以便使用服务发现功能
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level: #调整相关包的 log 级别，以便排查问题
+    org.springframework.cloud.gateway: debug

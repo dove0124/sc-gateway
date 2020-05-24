@@ -1,0 +1,31 @@
+spring:
+  ## 配置rabbitMQ 信息
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      trace:
+        enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+  instance:
+#    leaseRenewalIntervalInSeconds: 10   # spring admin
+#    health-check-url-path: /actuator/health  # spring admin
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+#management:
+#  security:
+#    enabled: false
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream

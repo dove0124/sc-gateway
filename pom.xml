@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.springcloud.book</groupId>
+    <artifactId>sc</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>sc</name>
+    <url>http://springcloud.cn</url>
+
+    <modules>
+        <module>sc-eureka-server</module>
+        <module>sc-config-server</module>
+        <module>sc-consul-server</module>
+        <module>sc-gateway</module>
+        <module>sc-rx-service</module>
+        <module>sc-r2dbc-service</module>
+        <module>sc-webflux-service</module>
+        <module>prescription-service</module>
+        <module>medicine-service</module>
+        <module>card-service</module>
+        <module>sc-common</module>
+        <module>sc-user-service</module>
+        <module>sc-data-service</module>
+        <module>sc-hystrix-dashboard</module>
+        <module>sc-admin-server</module>
+        <module>grpc-lib</module>
+        <module>cloud-grpc-server</module>
+        <module>cloud-grpc-client</module>
+        <module>node-sidecar</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <!--<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
+        <!--<spring-cloud.version>Finchley.SR2</spring-cloud.version>-->
+        <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-config-client</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-all</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--注意： 这里必须要添加，否则各种依赖有问题 -->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>dev</id>-->
+            <!--<properties>-->
+                <!--<env>dev</env>-->
+            <!--</properties>-->
+            <!--<activation>-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>prod</id>-->
+            <!--<properties>-->
+                <!--<env>prod</env>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

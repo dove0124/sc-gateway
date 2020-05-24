@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8741}
+#spring:
+#  application:
+#    name: node-sidecar
+#  cloud:
+#    config:
+#      uri: ${CONFIG_SERVER_URL:http://localhost:8710}
+#      discovery:
+#        enabled: true
+#        serviceId: node-sidecar
+spring:
+  cloud:
+#    config:
+#      label: master
+#      #      uri: http://localhost:9090
+#      discovery:
+#        enabled: true
+#        service-id: sc-config-server
+#      name: app-config, sluth-config
+#      profile: dev
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口
+  application:
+    name: node-sidecar

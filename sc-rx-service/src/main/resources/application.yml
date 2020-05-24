@@ -1,0 +1,52 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+  instance:
+    #    leaseRenewalIntervalInSeconds: 10   # spring admin
+    #    health-check-url-path: /actuator/health  # spring admin
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+ribbon:
+  ConnectTimeout: 7000
+  ReadTimeout: 7000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+## 调用链 Sleuth + ZipKin
+#spring:
+#  sleuth:
+#    web:
+#      client:
+#        enabled: true
+#    sampler:
+#      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
+#  zipkin:
+#    base-url: http://localhost:8080
+mybatis:
+  #    type-aliases-package: cn.rongcapital.mc2.rulemanager.mapper
+  config-location: classpath:mybatis-config.xml
+spring:
+  data:
+    mongodb:
+      host: localhost # mongodb的连接地址
+      port: 27017 # mongodb的连接端口号
+      database: admin # mongodb的连接的数据库
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ndadmin
+    password: ndadmin
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+    maxLifetime: 1765000
+    maximumPoolSize: 15

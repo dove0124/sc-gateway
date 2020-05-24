@@ -1,0 +1,14 @@
+server:
+  port: 9099
+spring:
+  cloud:
+    config:
+      label: master
+      #      uri: http://localhost:9090
+      discovery:
+        enabled: true
+        service-id: sc-config-server
+      name: app-config
+      profile: dev
+  application:
+    name: sc-hystrix-dashboard

@@ -1,0 +1,1065 @@
+2020-04-27 19:55:07.661 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$32b2a2b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:55:08.175 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 19:55:08.178 [main] INFO  c.s.book.main.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 19:55:08.488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 19:55:08.520 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 29ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 19:55:08.531 [main] ERROR o.s.boot.SpringApplication
+				-Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:184)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.springboot.book.main.WebFluxApplication.main(WebFluxApplication.java:24)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:743)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:742)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:649)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1605)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:494)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:230)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:223)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:213)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:167)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:142)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/netflix/hystrix/contrib/javanica/aop/aspectj/HystrixCommandAspect
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 common frames omitted
+2020-04-27 19:55:08.532 [main] WARN  o.s.boot.SpringApplication
+				-Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:743)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:742)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:649)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1605)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:494)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:616)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:608)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1242)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:869)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:857)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:844)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:795)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.springboot.book.main.WebFluxApplication.main(WebFluxApplication.java:24)
+Caused by: java.lang.NoClassDefFoundError: com/netflix/hystrix/contrib/javanica/aop/aspectj/HystrixCommandAspect
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2020-04-27 19:57:13.245 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$a6a342b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:13.702 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 19:57:13.705 [main] INFO  c.s.book.main.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 19:57:13.972 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 19:57:14.004 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 29ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 19:57:14.057 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 19:57:14.160 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 19:57:14.203 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 19:57:14.218 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 19:57:14.263 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=33108ac5-8e39-35b2-92d6-745613afad78
+2020-04-27 19:57:14.333 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 19:57:14.337 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 19:57:14.339 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 19:57:14.361 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$a6a342b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.378 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.435 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.446 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.452 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.452 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.453 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 19:57:14.630 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 19:57:14.661 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 19:57:14.662 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 19:57:14.676 [cluster-ClusterId{value='5ea6c89af798dd06db62813c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:105}] to localhost:27017
+2020-04-27 19:57:14.679 [cluster-ClusterId{value='5ea6c89af798dd06db62813c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2141232}
+2020-04-27 19:57:14.680 [cluster-ClusterId{value='5ea6c89af798dd06db62813c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 19:57:14.924 [cluster-ClusterId{value='5ea6c89af798dd06db62813b', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:106}] to localhost:27017
+2020-04-27 19:57:14.926 [cluster-ClusterId{value='5ea6c89af798dd06db62813b', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1165035}
+2020-04-27 19:57:15.083 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 19:57:15.083 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 19:57:15.085 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 19:57:15.086 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 19:57:15.480 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 19:57:15.678 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 19:57:15.696 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 19:57:16.141 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 19:57:16.150 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 19:57:16.158 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 19:57:16.161 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 19:57:16.213 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 19:57:16.241 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 19:57:16.242 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 19:57:16.242 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 19:57:16.419 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 19:57:16.446 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 19:57:16.446 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 19:57:16.446 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 19:57:16.452 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@6ec3d8e4
+2020-04-27 19:57:16.486 [main] INFO  o.s.b.w.e.netty.NettyWebServer
+				-Netty started on port(s): 5000
+2020-04-27 19:57:16.497 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 19:57:16.841 [main] INFO  c.s.book.main.WebFluxApplication
+				-Started WebFluxApplication in 4.441 seconds (JVM running for 5.162)
+2020-04-27 19:57:20.184 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:107}] to localhost:27017
+2020-04-27 20:03:18.481 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$d8d02dda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:18.988 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:03:18.991 [main] INFO  c.s.book.main.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:03:19.269 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:03:19.300 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 29ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:03:19.354 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:03:19.462 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:03:19.507 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:03:19.523 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:03:19.604 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=90df27f5-2c7d-32fe-99d1-8701f43b48be
+2020-04-27 20:03:19.641 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:03:19.644 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:03:19.647 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:03:19.669 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$d8d02dda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.685 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.743 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.754 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.763 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.764 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.765 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:03:19.893 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:03:19.899 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:03:19.899 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:03:19.899 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:03:20.102 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:03:20.134 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:03:20.134 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:03:20.149 [cluster-ClusterId{value='5ea6ca08bb658e7c71c35750', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:120}] to localhost:27017
+2020-04-27 20:03:20.152 [cluster-ClusterId{value='5ea6ca08bb658e7c71c35750', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1956343}
+2020-04-27 20:03:20.152 [cluster-ClusterId{value='5ea6ca08bb658e7c71c35750', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:03:20.400 [cluster-ClusterId{value='5ea6ca08bb658e7c71c3574f', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:121}] to localhost:27017
+2020-04-27 20:03:20.402 [cluster-ClusterId{value='5ea6ca08bb658e7c71c3574f', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1069036}
+2020-04-27 20:03:20.571 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:03:20.571 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:03:20.574 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:03:20.574 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:03:20.959 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:03:21.164 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:03:21.181 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:03:21.629 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:03:21.639 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:03:21.649 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:03:21.651 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:03:21.705 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:03:21.735 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:03:21.735 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:03:21.735 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:03:21.924 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:03:21.956 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:03:21.956 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:03:21.956 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:03:21.964 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@6c66ddab
+2020-04-27 20:03:21.975 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:03:21.982 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat started on port(s): 5000 (http) with context path ''
+2020-04-27 20:03:22.008 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 20:03:22.266 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:122}] to localhost:27017
+2020-04-27 20:03:22.413 [main] INFO  c.s.book.main.WebFluxApplication
+				-Started WebFluxApplication in 4.771 seconds (JVM running for 5.488)
+2020-04-27 20:06:56.610 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$b9dd30b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.092 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:06:57.094 [main] INFO  c.s.book.main.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:06:57.397 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:06:57.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 27ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:06:57.480 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:06:57.588 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:06:57.634 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:06:57.729 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=db9cca08-01e5-30e1-af13-81f35b3cc799
+2020-04-27 20:06:57.769 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:06:57.773 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:06:57.777 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:06:57.798 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$b9dd30b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.806 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.806 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.814 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.818 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.818 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.819 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:06:57.939 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:06:57.945 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:06:57.945 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:06:57.946 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:06:58.151 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:06:58.184 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:06:58.184 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:06:58.200 [cluster-ClusterId{value='5ea6cae243ba802ed3b29f3d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:130}] to localhost:27017
+2020-04-27 20:06:58.203 [cluster-ClusterId{value='5ea6cae243ba802ed3b29f3d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1935405}
+2020-04-27 20:06:58.203 [cluster-ClusterId{value='5ea6cae243ba802ed3b29f3d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:06:58.452 [cluster-ClusterId{value='5ea6cae243ba802ed3b29f3c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:131}] to localhost:27017
+2020-04-27 20:06:58.453 [cluster-ClusterId{value='5ea6cae243ba802ed3b29f3c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=979752}
+2020-04-27 20:06:58.597 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:06:58.597 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:06:58.600 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:06:58.600 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:06:58.969 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:06:59.152 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:06:59.168 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:06:59.594 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:06:59.601 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:06:59.609 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:06:59.611 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:06:59.655 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:06:59.685 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:06:59.685 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:06:59.685 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:06:59.870 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:06:59.900 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:06:59.900 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:06:59.900 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:06:59.906 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@67a0ff25
+2020-04-27 20:06:59.916 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:06:59.923 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat started on port(s): 5000 (http) with context path ''
+2020-04-27 20:06:59.935 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 20:07:00.273 [main] INFO  c.s.book.main.WebFluxApplication
+				-Started WebFluxApplication in 4.431 seconds (JVM running for 5.118)
+2020-04-27 20:07:03.574 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:133}] to localhost:27017
+2020-04-27 20:10:00.590 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$958459b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.062 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:10:01.064 [main] INFO  c.springboot.book.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:10:01.345 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:10:01.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 27ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:10:01.430 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:01.542 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:01.586 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:01.681 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=db9cca08-01e5-30e1-af13-81f35b3cc799
+2020-04-27 20:10:01.718 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:10:01.721 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:10:01.724 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:10:01.746 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$958459b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.754 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.754 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.767 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.771 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.772 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.772 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:01.891 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:10:01.896 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:01.897 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:10:01.897 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:10:02.094 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:10:02.125 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:10:02.125 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:10:02.140 [cluster-ClusterId{value='5ea6cb9a9f350f516f91f707', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:139}] to localhost:27017
+2020-04-27 20:10:02.143 [cluster-ClusterId{value='5ea6cb9a9f350f516f91f707', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1941726}
+2020-04-27 20:10:02.144 [cluster-ClusterId{value='5ea6cb9a9f350f516f91f707', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:10:02.400 [cluster-ClusterId{value='5ea6cb9a9f350f516f91f706', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:140}] to localhost:27017
+2020-04-27 20:10:02.401 [cluster-ClusterId{value='5ea6cb9a9f350f516f91f706', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1173332}
+2020-04-27 20:10:02.557 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:10:02.557 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:10:02.561 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:10:02.561 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:10:02.968 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:10:03.153 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:10:03.169 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:10:03.598 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:10:03.606 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:10:03.613 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:10:03.616 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:10:03.660 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:10:03.688 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:10:03.688 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:10:03.688 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:10:03.876 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:10:03.907 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:10:03.907 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:10:03.907 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:10:03.913 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@4070ace9
+2020-04-27 20:10:03.923 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:03.925 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Pausing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:03.925 [main] INFO  o.a.catalina.core.StandardService
+				-Stopping service [Tomcat]
+2020-04-27 20:10:03.929 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Stopping ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:03.929 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Destroying ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:03.930 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-27 20:10:03.932 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-stopped org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@4070ace9
+2020-04-27 20:10:03.932 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Removing {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:10:03.933 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 0 subscriber(s).
+2020-04-27 20:10:03.933 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-stopped bean 'outbound.springCloudBus'
+2020-04-27 20:10:03.933 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:10:03.933 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 0 subscriber(s).
+2020-04-27 20:10:03.933 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-stopped bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:10:03.933 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:10:03.933 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:10:03.939 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'taskScheduler'
+2020-04-27 20:10:05.967 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter
+				-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2020-04-27 20:10:40.624 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$d3974612] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.102 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:10:41.105 [main] INFO  c.springboot.book.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:10:41.387 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:10:41.415 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 26ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:10:41.471 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:41.580 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:41.623 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:41.639 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:10:41.721 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=c0419da0-c693-33c3-9fd7-e499acf8ee00
+2020-04-27 20:10:41.758 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:10:41.765 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:10:41.767 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:10:41.792 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$d3974612] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.809 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.869 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.879 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.885 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.887 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:41.888 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:10:42.014 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:10:42.019 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:42.019 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:10:42.019 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:10:42.227 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:10:42.260 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:10:42.260 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:10:42.276 [cluster-ClusterId{value='5ea6cbc220df9a18a4a9e632', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:143}] to localhost:27017
+2020-04-27 20:10:42.279 [cluster-ClusterId{value='5ea6cbc220df9a18a4a9e632', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1758022}
+2020-04-27 20:10:42.280 [cluster-ClusterId{value='5ea6cbc220df9a18a4a9e632', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:10:42.527 [cluster-ClusterId{value='5ea6cbc220df9a18a4a9e631', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:144}] to localhost:27017
+2020-04-27 20:10:42.528 [cluster-ClusterId{value='5ea6cbc220df9a18a4a9e631', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1031505}
+2020-04-27 20:10:42.715 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:10:42.715 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:10:42.718 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:10:42.718 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:10:43.127 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:10:43.324 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:10:43.340 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:10:43.784 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:10:43.794 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:10:43.805 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:10:43.809 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:10:43.866 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:10:43.896 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:10:43.896 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:10:43.896 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:10:44.080 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:10:44.125 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:10:44.125 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:10:44.125 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:10:44.131 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@4e5d5ac1
+2020-04-27 20:10:44.141 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:44.143 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Pausing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:44.143 [main] INFO  o.a.catalina.core.StandardService
+				-Stopping service [Tomcat]
+2020-04-27 20:10:44.147 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Stopping ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:44.147 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Destroying ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:10:44.148 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-27 20:10:44.150 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-stopped org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@4e5d5ac1
+2020-04-27 20:10:44.151 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Removing {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:10:44.151 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 0 subscriber(s).
+2020-04-27 20:10:44.151 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-stopped bean 'outbound.springCloudBus'
+2020-04-27 20:10:44.151 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:10:44.151 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 0 subscriber(s).
+2020-04-27 20:10:44.151 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-stopped bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:10:44.152 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:10:44.152 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:10:44.158 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Shutting down ExecutorService 'taskScheduler'
+2020-04-27 20:10:46.195 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter
+				-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2020-04-27 20:11:17.328 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$98070f87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:17.808 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:11:17.811 [main] INFO  c.springboot.book.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:11:18.118 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:11:18.149 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 28ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:11:18.215 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:18.324 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:18.369 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:18.385 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:18.465 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=c0419da0-c693-33c3-9fd7-e499acf8ee00
+2020-04-27 20:11:18.503 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:11:18.507 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:11:18.509 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:11:18.533 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$98070f87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.550 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.611 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.623 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.628 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.630 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.631 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:18.773 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:11:18.779 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:11:18.780 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:11:18.780 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:11:18.981 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:11:19.013 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:11:19.014 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:11:19.028 [cluster-ClusterId{value='5ea6cbe711e0e318f3dc7d39', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:146}] to localhost:27017
+2020-04-27 20:11:19.031 [cluster-ClusterId{value='5ea6cbe711e0e318f3dc7d39', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1708245}
+2020-04-27 20:11:19.031 [cluster-ClusterId{value='5ea6cbe711e0e318f3dc7d39', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:11:19.273 [cluster-ClusterId{value='5ea6cbe611e0e318f3dc7d38', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:147}] to localhost:27017
+2020-04-27 20:11:19.278 [cluster-ClusterId{value='5ea6cbe611e0e318f3dc7d38', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5177673}
+2020-04-27 20:11:19.453 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:11:19.453 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:11:19.455 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:11:19.455 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:11:19.852 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:11:20.064 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:11:20.098 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:11:20.540 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:11:20.549 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:11:20.557 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:11:20.560 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:11:20.612 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:11:20.640 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:11:20.640 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:11:20.640 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:11:20.831 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:11:20.860 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:11:20.860 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:11:20.860 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:11:20.866 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@da5d5e1
+2020-04-27 20:11:20.876 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:11:20.883 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat started on port(s): 5000 (http) with context path ''
+2020-04-27 20:11:20.893 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 20:11:21.231 [main] INFO  c.springboot.book.WebFluxApplication
+				-Started WebFluxApplication in 4.731 seconds (JVM running for 5.432)
+2020-04-27 20:11:24.014 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:148}] to localhost:27017
+2020-04-27 20:11:58.725 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$e4534d28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:59.204 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:11:59.207 [main] INFO  c.springboot.book.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:11:59.510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:11:59.539 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 27ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:11:59.595 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:59.703 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:59.744 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:59.763 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:11:59.846 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=c0419da0-c693-33c3-9fd7-e499acf8ee00
+2020-04-27 20:11:59.884 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:11:59.887 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:11:59.890 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:11:59.917 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$e4534d28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:59.934 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:11:59.992 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:12:00.004 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:12:00.011 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:12:00.012 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:12:00.013 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:12:00.160 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat initialized with port(s): 5000 (http)
+2020-04-27 20:12:00.166 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Initializing ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:12:00.167 [main] INFO  o.a.catalina.core.StandardService
+				-Starting service [Tomcat]
+2020-04-27 20:12:00.167 [main] INFO  o.a.catalina.core.StandardEngine
+				-Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-27 20:12:00.396 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:12:00.430 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:12:00.430 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:12:00.446 [cluster-ClusterId{value='5ea6cc102c95f479078c0a5e', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:150}] to localhost:27017
+2020-04-27 20:12:00.450 [cluster-ClusterId{value='5ea6cc102c95f479078c0a5e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2271603}
+2020-04-27 20:12:00.451 [cluster-ClusterId{value='5ea6cc102c95f479078c0a5e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:12:00.717 [cluster-ClusterId{value='5ea6cc102c95f479078c0a5d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:151}] to localhost:27017
+2020-04-27 20:12:00.718 [cluster-ClusterId{value='5ea6cc102c95f479078c0a5d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1370467}
+2020-04-27 20:12:00.924 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:12:00.924 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:12:00.928 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:12:00.928 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:12:01.399 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:12:01.624 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:12:01.646 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:12:02.286 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:12:02.301 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:12:02.317 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:12:02.320 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:12:02.386 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:12:02.429 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:12:02.429 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:12:02.429 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:12:02.639 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:12:02.673 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:12:02.673 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:12:02.673 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:12:02.680 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@b808af5
+2020-04-27 20:12:02.692 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+				-Starting ProtocolHandler ["http-nio-5000"]
+2020-04-27 20:12:02.701 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				-Tomcat started on port(s): 5000 (http) with context path ''
+2020-04-27 20:12:02.715 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 20:12:03.079 [main] INFO  c.springboot.book.WebFluxApplication
+				-Started WebFluxApplication in 5.154 seconds (JVM running for 5.843)
+2020-04-27 20:12:06.099 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:152}] to localhost:27017
+2020-04-27 20:13:06.053 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$98cc6e93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:06.522 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:13:06.525 [main] INFO  c.springboot.book.WebFluxApplication
+				-No active profile set, falling back to default profiles: default
+2020-04-27 20:13:06.853 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2020-04-27 20:13:06.881 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+				-Finished Spring Data repository scanning in 26ms. Found 1 Reactive MongoDB repository interfaces.
+2020-04-27 20:13:06.936 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:13:07.039 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:13:07.083 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:13:07.099 [main] WARN  o.s.boot.actuate.endpoint.EndpointId
+				-Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-27 20:13:07.179 [main] INFO  o.s.cloud.context.scope.GenericScope
+				-BeanFactory id=1bb2219d-5948-3e15-bac9-5ccec330e90f
+2020-04-27 20:13:07.214 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-27 20:13:07.217 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-27 20:13:07.220 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor
+				-No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-27 20:13:07.241 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$98cc6e93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.257 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.314 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.325 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.331 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.332 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.333 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker
+				-Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 20:13:07.515 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:13:07.546 [main] INFO  org.mongodb.driver.cluster
+				-Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-04-27 20:13:07.546 [main] INFO  org.mongodb.driver.cluster
+				-Adding discovered server localhost:27017 to client view of cluster
+2020-04-27 20:13:07.561 [cluster-ClusterId{value='5ea6cc53fe0a4838ecbbf027', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:2, serverValue:155}] to localhost:27017
+2020-04-27 20:13:07.563 [cluster-ClusterId{value='5ea6cc53fe0a4838ecbbf027', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1797134}
+2020-04-27 20:13:07.564 [cluster-ClusterId{value='5ea6cc53fe0a4838ecbbf027', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Discovered cluster type of STANDALONE
+2020-04-27 20:13:07.809 [cluster-ClusterId{value='5ea6cc53fe0a4838ecbbf026', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:1, serverValue:156}] to localhost:27017
+2020-04-27 20:13:07.811 [cluster-ClusterId{value='5ea6cc53fe0a4838ecbbf026', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster
+				-Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1463702}
+2020-04-27 20:13:07.986 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:13:07.986 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:13:07.988 [main] WARN  c.n.c.sources.URLConfigurationSource
+				-No URLs will be polled as dynamic configuration sources.
+2020-04-27 20:13:07.988 [main] INFO  c.n.c.sources.URLConfigurationSource
+				-To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 20:13:08.381 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+				-Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-27 20:13:08.569 [main] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar
+				-Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-27 20:13:08.587 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'taskScheduler'
+2020-04-27 20:13:09.011 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger
+				-You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:13:09.021 [main] WARN  o.s.c.c.l.r.ReactorLoadBalancerClientAutoConfiguration$ReactorLoadBalancerClientRibbonWarnLogger
+				-You have RibbonLoadBalancerClient on your classpath. LoadBalancerExchangeFilterFunction that uses it under the hood will be used by default. Spring Cloud Ribbon is now in maintenance mode, so we suggest switching to ReactorLoadBalancerExchangeFilterFunction instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 20:13:09.030 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'configWatchTaskScheduler'
+2020-04-27 20:13:09.032 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler
+				-Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-27 20:13:09.084 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-27 20:13:09.115 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-27 20:13:09.115 [main] INFO  o.s.i.c.PublishSubscribeChannel
+				-Channel 'sc-webflux-service-1.errorChannel' has 1 subscriber(s).
+2020-04-27 20:13:09.115 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean '_org.springframework.integration.errorLogger'
+2020-04-27 20:13:09.298 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration
+				-Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/sc-webflux-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2020-04-27 20:13:09.324 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+2020-04-27 20:13:09.325 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel
+				-Channel 'sc-webflux-service-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-27 20:13:09.325 [main] INFO  o.s.i.endpoint.EventDrivenConsumer
+				-started bean 'outbound.springCloudBus'
+2020-04-27 20:13:09.331 [main] INFO  o.s.c.c.b.ConsulInboundMessageProducer
+				-started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@78bad03b
+2020-04-27 20:13:09.365 [main] INFO  o.s.b.w.e.netty.NettyWebServer
+				-Netty started on port(s): 5000
+2020-04-27 20:13:09.375 [main] INFO  o.s.c.c.s.ConsulServiceRegistry
+				-Registering service with consul: NewService{id='sc-webflux-service-5000', name='sc-webflux-service', tags=[secure=false], address='SHINETECH-ANDY', meta=null, port=5000, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://SHINETECH-ANDY:5000/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2020-04-27 20:13:09.714 [main] INFO  c.springboot.book.WebFluxApplication
+				-Started WebFluxApplication in 4.461 seconds (JVM running for 5.134)
+2020-04-27 20:13:12.541 [nioEventLoopGroup-2-2] INFO  org.mongodb.driver.connection
+				-Opened connection [connectionId{localValue:3, serverValue:158}] to localhost:27017
